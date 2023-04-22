@@ -14,10 +14,10 @@ th = 2;
 
 
 LEFT();
-translate([0, 110, 58.5]) BAR();
-translate([0, 160, 77.2]) BAR();
+/*translate([0, 58, 55-6]) BAR();
+translate([0, 160, 82-4]) BAR();
 translate([0, 180, 50]) BAR();
-mirror([1,0,0]) translate([-360, 0, 0]) LEFT();
+mirror([1,0,0]) translate([-360, 0, 0]) LEFT();*/
 
 //BAR_L();
 //translate([-(360-10-10)/2, 15, 0]) BAR_R();
@@ -29,21 +29,34 @@ difference()
 {
     union()
     {
-        translate([0, 0, 28]) rotate([20.3, 0, 0]) cube([25, 207, 10]);
-        translate([0, 0, 28]) rotate([18, 0, 0]) cube([25, 5, 20]);
-        translate([0, 0, 0]) cube([10, 10, 28+5]);
+        translate([0, 0, 50-2-5]) rotate([16, 0, 0]) cube([25, 207, 10]);
+        translate([0, 0, 50-2-5]) rotate([18, 0, 0]) cube([25, 5, 20]);
+        translate([0, 0, 0]) cube([10, 10, 50+5-5]);
         translate([0, 180, 0]) rotate([0, 0, 0]) cube([10, 10, 105]);
         translate([0, 0, 0]) cube([10, 190, 10]);
-        translate([0, 110, 58.5]) cube([10, 10, 20]);
-        translate([0, 160, 77.2]) cube([10, 10, 20]);
+        translate([0, 58, 55-6]) cube([10, 10, 20]);
+        //translate([0, 58+10, 55-6]) cube([25, 10, 20]);
+        //translate([0, 58-10, 55-6]) cube([25, 10, 12]);
+        //translate([0, 58, 55-6+10]) cube([25, 10, 10]);
+        
+        translate([0, 160, 82-4]) cube([10, 10, 20]);
+        //translate([0, 160+10, 82-4]) cube([25, 20, 20]);
+        //translate([0, 160-10, 82-4]) cube([25, 10, 12]);
+        //translate([0, 160, 82-4+10]) cube([25, 10, 10]);
+        
+        //translate([0+10, 180, 50+10]) cube([15, 10, 20]);
+        //translate([0+10, 180, 50-10]) cube([15, 10, 10]);
+        //translate([0, 180-10, 50-10]) cube([25, 10, 40]);
     }
     
-    translate([6, 110+10/2, 58.5+10/2]) rotate([0, 90, 0]) rear_screw_hole();
-    translate([6, 160+10/2, 77.2+10/2]) rotate([0, 90, 0]) rear_screw_hole();
+    translate([6, 58+10/2, 55-6+10/2]) rotate([0, 90, 0]) rear_screw_hole();
+    translate([6, 160+10/2, 82-4+10/2]) rotate([0, 90, 0]) rear_screw_hole();
     translate([6, 180+10/2, 50+10/2]) rotate([0, 90, 0]) rear_screw_hole();
     
-    translate([0, -10, 28]) rotate([60, 0, 0]) cube([25, 30, 20]);
+    translate([0, -10, 50-2-5]) rotate([60, 0, 0]) cube([25, 30, 20]);
     translate([0, 180+10, 0]) rotate([0, 0, 0]) cube([25, 10, 115]);
+    
+    translate([10, -10, 50-2-20]) cube([25, 150, 20]);
 }
 }
 
